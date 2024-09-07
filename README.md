@@ -1,4 +1,12 @@
+This is a fork of the imgaug Python image augmentation library, originally written by Alexander Jung.  Since the original project is seemingly abandoned, this modifies it to preserve compatibility with newer versions of dependency libraries (specifically Numpy 2.0+).  It also incorporates some previous compatibility updates from Markus Patzold.
+
+The original code repository can be found [here](https://github.com/aleju/imgaug).<br>
+Markus Patzold's intermediary fix code can be found [here](https://github.com/marcown/imgaug).
+
+<br>
+
 # imgaug
+
 
 This python library helps you with augmenting images for your machine learning projects.
 It converts a set of input images into a new, much larger set of slightly altered images.
@@ -162,7 +170,7 @@ Example jupyter notebooks:
     [Polygons](https://nbviewer.jupyter.org/github/marcown/imgaug-doc/blob/master/notebooks/B03%20-%20Augment%20Polygons.ipynb),
     [Line Strings](https://nbviewer.jupyter.org/github/marcown/imgaug-doc/blob/master/notebooks/B06%20-%20Augment%20Line%20Strings.ipynb),
     [Heatmaps](https://nbviewer.jupyter.org/github/marcown/imgaug-doc/blob/master/notebooks/B04%20-%20Augment%20Heatmaps.ipynb),
-    [Segmentation Maps](https://nbviewer.jupyter.org/github/marcown/imgaug-doc/blob/master/notebooks/B05%20-%20Augment%20Segmentation%20Maps.ipynb) 
+    [Segmentation Maps](https://nbviewer.jupyter.org/github/marcown/imgaug-doc/blob/master/notebooks/B05%20-%20Augment%20Segmentation%20Maps.ipynb)
 
 More notebooks: [imgaug-doc/notebooks](https://github.com/marcown/imgaug-doc/tree/master/notebooks).
 
@@ -745,7 +753,7 @@ for batch_idx in range(100):
 
 ### Example: Very Complex Augmentation Pipeline
 
-Apply a very heavy augmentation pipeline to images (used to create the image 
+Apply a very heavy augmentation pipeline to images (used to create the image
 at the very top of this readme):
 ```python
 import numpy as np
@@ -1053,7 +1061,7 @@ ia.imshow(image_with_hms)
 LineStrings and segmentation maps support similar methods as shown above.
 
 
-### Example: Using Augmenters Only Once 
+### Example: Using Augmenters Only Once
 
 While the interface is adapted towards re-using instances of augmenters
 many times, you are also free to use them only once. The overhead to
